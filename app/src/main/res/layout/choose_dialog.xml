@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/choose_ground"
+    android:gravity="center|center_horizontal|center_vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="模式选择" />
+
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#aa000000" />
+
+    <RadioGroup
+        android:id="@+id/choose"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/send_mock"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:checked="true"
+            android:text="发送模式" />
+
+        <RadioButton
+            android:id="@+id/reception_mock"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="接收模式" />
+    </RadioGroup>
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="#aa000000" />
+    <RadioButton
+        android:id="@+id/qf_mock"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="群发" />
+
+    <Button
+        android:id="@+id/choose_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_choose_radius_30"
+        android:text="确定"
+        />
+
+
+
+
+
+</LinearLayout>

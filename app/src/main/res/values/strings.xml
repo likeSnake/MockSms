@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Mock msg</string>
+    <string name="d">若您想使用本软件，请根据接下来提示，将本app设置为默认短信，否则功能将无法使用！ 模拟成功后返回系统短信页面，设置回来即可正常接收短信</string>
+    <string name="b">退出使用后请务必进入到系统短信界面，将系统短信设置为默认短信，否则将收不到短信！</string>
+</resources>

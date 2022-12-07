@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/start_ground"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/qf_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:text="群发" />
+
+    <View
+
+        android:layout_width="fill_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/teal_200" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="群发号码"
+            />
+
+        <EditText
+            android:id="@+id/qf_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:maxHeight="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:hint="号码请用英文逗号隔开，例如：110,119,120" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:textSize="16sp"
+            android:text="群发内容"
+            />
+
+        <EditText
+            android:id="@+id/qf_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:maxHeight="150dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:hint="群发内容"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        >
+
+        <Button
+            android:id="@+id/send_qf"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="@drawable/bg_choose_radius_30"
+            android:text="发送"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

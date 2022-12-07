@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@android:color/white"
+    android:paddingStart="16dp"
+    android:paddingTop="5dp"
+    android:paddingEnd="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_portrait"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            app:cardCornerRadius="100dp"
+            app:cardPreventCornerOverlap="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:targetApi="lollipop">
+
+            <ImageView
+                android:id="@+id/MsgTouX"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@android:color/holo_orange_dark"
+                android:src="@drawable/ic_default_avatar"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/MsgName_tag"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:background="@android:color/holo_orange_dark"
+                android:text="C"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/sms_unread"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:background="@drawable/shape_circle_red"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="9sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/sent_name"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textSize="17sp"
+        android:text="name"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/sent_content"
+        app:layout_constraintEnd_toStartOf="@id/sent_date"
+        app:layout_constraintStart_toEndOf="@id/cl_portrait"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sent_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/sent_name" />
+
+    <TextView
+        android:id="@+id/sent_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="5dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constraintBottom_toTopOf="@id/view_divider"
+        app:layout_constraintEnd_toStartOf="@id/sent_state"
+        app:layout_constraintStart_toStartOf="@id/sent_name"
+        app:layout_constraintTop_toBottomOf="@id/sent_name" />
+
+    <ImageView
+        android:id="@+id/sent_state"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@drawable/circle_red"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/sent_content"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/view_divider"
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:background="#E4E4E4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cl_portrait" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

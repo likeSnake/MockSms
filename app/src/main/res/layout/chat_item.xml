@@ -1,0 +1,129 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/time_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="12sp"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/chat_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <FrameLayout
+           android:layout_width="40dp"
+           android:layout_height="40dp">
+           <androidx.cardview.widget.CardView
+               android:id="@+id/name_tag_bg"
+               android:layout_width="36dp"
+               android:layout_height="36dp"
+               android:layout_gravity="center"
+               app:cardCornerRadius="200dp"
+               tools:targetApi="lollipop">
+
+               <ImageView
+                   android:id="@+id/default_avatar"
+                   android:layout_width="36dp"
+                   android:layout_height="36dp"
+                   android:src="@drawable/ic_default_avatar"
+                   android:background="@android:color/holo_orange_dark"
+                   android:visibility="gone"
+                   app:tint="@android:color/white" />
+
+               <TextView
+                   android:id="@+id/name_tag"
+                   android:layout_width="36dp"
+                   android:layout_height="36dp"
+                   android:layout_centerVertical="true"
+                   android:background="@android:color/holo_orange_dark"
+                   android:gravity="center"
+                   android:textColor="#fff"
+                   android:textSize="20sp"
+                   android:textStyle="bold" />
+           </androidx.cardview.widget.CardView>
+       </FrameLayout>
+
+        <TextView
+            android:id="@+id/user_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/msg_left"
+            android:maxWidth="230dp"
+            android:text="zdfbzdfbzd szdfgvZSFDabAerva"
+            android:textColor="@color/black" />
+        <ImageView
+            android:id="@+id/mms_left"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/user_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:minWidth="60dp"
+            android:paddingStart="10dp"
+            android:text="22:33"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chat_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/me_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:gravity="end"
+            android:layout_weight="1"
+            android:minWidth="60dp"
+            android:text="22:33"
+            android:layout_gravity="bottom"
+            android:paddingEnd="10dp"/>
+
+        <ImageView
+            android:id="@+id/send_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/ic_warning"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/mms_right"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:visibility="gone"
+            tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/me_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="250dp"
+            android:text="23456789"
+            android:textColor="@color/black"
+            android:background="@drawable/msg_right"/>
+    </LinearLayout>
+
+
+</LinearLayout>
